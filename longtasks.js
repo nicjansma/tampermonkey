@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         LongTasks
-// @version      1.0
+// @version      1.1
 // @description  Logs LongTasks to the console
 // @author       Nic Jansma (nic@nicj.net)
 // @grant        none
@@ -30,6 +30,8 @@
 
     try {
         observer.observe({entryTypes: ["longtask"]});
+
+        console.log("LongTasks: Appears to be supported");
     } catch (e) {
         console.log("LongTasks: Not supported");
     }

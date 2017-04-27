@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         LongTasks
-// @version      1.0
+// @version      1.1
 // @description  Logs LongTasks to the console
 // @author       Nic Jansma (nic@nicj.net)
 // @grant        none
