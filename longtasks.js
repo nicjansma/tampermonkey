@@ -11,6 +11,11 @@
 // ==/UserScript==
 
 (function() {
+    // only run in top frame
+    if (window.self !== window.top) {
+        return;
+    }
+
     console.log("LongTasks: Initializing");
 
     var observer = new PerformanceObserver(function(list) {
@@ -28,10 +33,14 @@
         }
     });
 
+    if (typeof window.PerformanceLongTaskTiming !== "undefined") {
+        console.log("LongTasks: Appears to be supported");
+    } else {
+        console.log("LongTasks: Not supported");
+    }
+
     try {
         observer.observe({entryTypes: ["longtask"]});
-
-        console.log("LongTasks: Appears to be supported");
     } catch (e) {
         console.log("LongTasks: Not supported");
     }
