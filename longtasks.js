@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         LongTasks
-// @version      1.1
+// @version      1.2
 // @description  Logs LongTasks to the console
 // @author       Nic Jansma (nic@nicj.net)
 // @grant        none
@@ -22,15 +22,16 @@
 
     var observer = new PerformanceObserver(function(list) {
         var perfEntries = list.getEntries();
+
         for (var i = 0; i < perfEntries.length; i++) {
             console.log("LongTasks: ",
                         perfEntries[i].name,
                         perfEntries[i].duration,
                         perfEntries[i].attribution.length,
-                        perfEntries[i].attribution[0].containerType,
-                        perfEntries[i].attribution[0].containerName,
-                        perfEntries[i].attribution[0].containerSrc,
-                        perfEntries[i].attribution[0].containerId,
+                        perfEntries[i].attribution.length > 0 ? perfEntries[i].attribution[0].containerType : null,
+                        perfEntries[i].attribution.length > 0 ? perfEntries[i].attribution[0].containerName : null,
+                        perfEntries[i].attribution.length > 0 ? perfEntries[i].attribution[0].containerSrc : null,
+                        perfEntries[i].attribution.length > 0 ? perfEntries[i].attribution[0].containerId : null,
                         perfEntries[i]);
         }
     });
