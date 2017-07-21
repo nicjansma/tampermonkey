@@ -11,6 +11,8 @@
 // ==/UserScript==
 
 (function() {
+    "use strict";
+
     // maximum interaction delay before logging
     var MAX_DELAY = 50;
 
@@ -19,8 +21,9 @@
         return;
     }
 
-    if (typeof PerformanceObserver !== "function") {
-        console.log("InteractionDelay: PerformanceObserver not supported");
+    if (typeof PerformanceObserver !== "function" ||
+        typeof window.PerformanceLongTaskTiming !== "function") {
+        console.log("InteractionDelay: PerformanceObserver or LongTasks not supported");
         return;
     }
 
@@ -71,8 +74,10 @@
                     return (ltEnd >= e.timeStamp && ltEnd <= when);
                 });
 
-                console.log("InteractionDelay: Interaction delay for", e.type, "at", Math.round(e.timeStamp), "satisifed at",
-                            Math.round(when), "took", Math.round(delay), "ms with", culprits.length, "culprits");
+                console.log("InteractionDelay: Interaction delay for", e.type,
+                    "at", Math.round(e.timeStamp), "satisifed at",
+                    Math.round(when), "took", Math.round(delay), "ms with",
+                    culprits.length, "culprits");
 
                 // Log each culprit
                 culprits.forEach(function(culprit) {
@@ -86,4 +91,4 @@
     window.addEventListener("scroll", handleInteraction, false);
     document.addEventListener("click", handleInteraction, false);
     document.addEventListener("keydown", handleInteraction, false);
-})();
+}());

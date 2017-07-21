@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         mPulse Boomerang
 // @version      1.0
-// @description  Injects Boomerang onto a page
+// @description  Injects mPulse's Boomerang onto a page
 // @author       Nic Jansma (nic@nicj.net)
 // @grant        none
 // @match        */*

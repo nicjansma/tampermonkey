@@ -11,6 +11,8 @@
 // ==/UserScript==
 
 (function() {
+    "use strict";
+
     // only run in top frame
     if (window.self !== window.top) {
         return;
@@ -44,4 +46,4 @@
     } catch (e) {
         console.log("LongTasks: Not supported");
     }
-})();
+}());
