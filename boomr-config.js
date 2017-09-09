@@ -10,5 +10,6 @@
 // @updateUrl    https://raw.githubusercontent.com/nicjansma/tampermonkey/master/boomr-config.meta.js
 // ==/UserScript==
 
+/* eslint-disable camelcase */
 window.BOOMR_config = {
 };

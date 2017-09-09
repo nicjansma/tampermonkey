@@ -20,7 +20,7 @@
 
     console.log("LongTasks: Initializing");
 
-    var observer = new PerformanceObserver(function(list) {
+    var observer = new window.PerformanceObserver(function(list) {
         var perfEntries = list.getEntries();
 
         for (var i = 0; i < perfEntries.length; i++) {
@@ -43,7 +43,7 @@
     }
 
     try {
-        observer.observe({entryTypes: ["longtask"]});
+        observer.observe({ entryTypes: ["longtask"] });
     } catch (e) {
         console.log("LongTasks: Not supported");
     }

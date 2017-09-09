@@ -31,7 +31,7 @@
     var longTasks = [];
 
     // Start PerformanceObserver
-    var observer = new PerformanceObserver(function(list) {
+    var observer = new window.PerformanceObserver(function(list) {
         var entries = list.getEntries();
         console.log("InteractionDelay: LongTasks added", entries);
 
@@ -44,7 +44,7 @@
 
     // Listen for new entries
     try {
-        observer.observe({entryTypes: ["longtask"]});
+        observer.observe({ entryTypes: ["longtask"] });
     } catch (e) {
         console.log("InteractionDelay: LongTasks not supported");
     }

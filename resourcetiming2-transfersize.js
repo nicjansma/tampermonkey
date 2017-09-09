@@ -31,8 +31,8 @@
      * @returns {number} Sum of sizes of this frame and all sub-frames
      */
     function findResourceTimingTransferSize(frame, isTopWindow, depth) {
-        var size = 0, i, navEntries, frameOffset, subFrames,
-            navEntry, t, rtEntry, scripts = {};
+        var size = 0, i, navEntries, subFrames,
+            navEntry, t;
 
         if (typeof isTopWindow === "undefined") {
             isTopWindow = true;
@@ -77,8 +77,7 @@
             }
 
             // offset all of the entries by the specified offset for this frame
-            var frameEntries = frame.performance.getEntriesByType("resource"),
-                frameFixedEntries = [];
+            var frameEntries = frame.performance.getEntriesByType("resource");
 
             for (i = 0; frameEntries && i < frameEntries.length; i++) {
                 t = frameEntries[i];
@@ -104,7 +103,9 @@
      * @returns {boolean} true if true, false otherwise
      */
     function isFrameAccessible(frame) {
+        /* eslint-disable no-unused-vars */
         var dummy;
+        /* eslint-enable no-unused-vars */
 
         try {
             // Try to access location.href first to trigger any Cross-Origin

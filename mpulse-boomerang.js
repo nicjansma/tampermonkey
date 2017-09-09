@@ -10,6 +10,7 @@
 // @updateUrl    https://raw.githubusercontent.com/nicjansma/tampermonkey/master/mpulse-boomerang.meta.js
 // ==/UserScript==
 
+/* eslint-disable camelcase, no-script-url, no-underscore-dangle, no-undef */
 (function() {
     "use strict";
 
