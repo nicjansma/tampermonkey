@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         mPulse Boomerang
-// @version      1.1
+// @version      1.2
 // @description  Injects mPulse's Boomerang onto a page
 // @author       Nic Jansma (nic@nicj.net)
 // @grant        none
@@ -72,7 +72,7 @@
         }
         js.id = "boomr-if-as";
         js.src = "//c.go-mpulse.net/boomerang/" + window.BOOMR_API_key;
-        BOOMR_lstart = new Date().getTime();
+        window.BOOMR_lstart = new Date().getTime();
         this.body.appendChild(js);
     };
 
