@@ -48,15 +48,16 @@
             apiKey = boomerangUrl.substr(boomerangUrl.lastIndexOf("/") + 1);
         }
 
-        console.log("\u263D Boomerang PCI compliance:", w.BOOMR.version, apiKey);
+        console.log("\u{1F319} Boomerang PCI compliance:", w.BOOMR.version, apiKey);
 
         if (!apiKey) {
             console.error(
-                "\u263D Boomerang PCI compliance: Could not determine API key!",
-                "Not compatible with Boomerang >= 1.486");
+                "\u{1F319} Boomerang PCI compliance: Could not determine API key!",
+                "Not compatible with Boomerang >= 1.486",
+                "\u274C");
         } else {
             console.log(
-                "\u263D Boomerang PCI compliance: OK!");
+                "\u{1F319} Boomerang PCI compliance: OK!", "\u2705");
         }
     };
 
