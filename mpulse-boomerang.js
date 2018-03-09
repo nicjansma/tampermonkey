@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         mPulse Boomerang
-// @version      1.2
+// @namespace    http://nicj.net
+// @version      1.3
 // @description  Injects mPulse's Boomerang onto a page
 // @author       Nic Jansma (nic@nicj.net)
 // @grant        none
-// @match        */*
-// @run-at       document-start
+// @match        *
+// @run-at       document-body
 // @downloadUrl  https://raw.githubusercontent.com/nicjansma/tampermonkey/master/mpulse-boomerang.js
 // @updateUrl    https://raw.githubusercontent.com/nicjansma/tampermonkey/master/mpulse-boomerang.meta.js
 // ==/UserScript==
@@ -54,7 +55,7 @@
     iframe.src = "javascript:void(0)";
     iframe.title = ""; iframe.role = "presentation";
     (iframe.frameElement || iframe).style.cssText = "width:0;height:0;border:0;display:none;";
-    where = document.getElementsByTagName("script")[0];
+    where = document.getElementsByTagName("head")[0].children[0];
     where.parentNode.insertBefore(iframe, where);
 
     try {

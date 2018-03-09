@@ -1,15 +1,17 @@
 // ==UserScript==
 // @name         Scroll Back and Forth
+// @namespace    http://nicj.net
 // @version      1.0
 // @description  Scrolls back and forth on the page
 // @author       Nic Jansma (nic@nicj.net)
 // @grant        none
-// @match        */*
+// @match        *
 // @run-at       document-start
 // @downloadUrl  https://raw.githubusercontent.com/nicjansma/tampermonkey/master/scroll-back-and-forth.js
 // @updateUrl    https://raw.githubusercontent.com/nicjansma/tampermonkey/master/scroll-back-and-forth.meta.js
 // ==/UserScript==
 
+/* eslint-disable */
 /*
  * smoothscroll polyfill - v0.3.5
  * https://iamdustan.github.io/smoothscroll
@@ -334,7 +336,10 @@
   }
 })(window, document);
 
+/* eslint-enable */
 (function() {
+    "use strict";
+
     var INTERVAL = 100;
     var INCREMENT = 1000;
 
@@ -342,10 +347,10 @@
     var mode = 0;
 
     // scroll to top first
-    window.scroll({ top: y, left: 0});
+    window.scroll({ top: y, left: 0 });
 
     setTimeout(function go() {
-        window.scroll({ top: y, left: 0, behavior: 'smooth' });
+        window.scroll({ top: y, left: 0, behavior: "smooth" });
 
         if (mode === 0) {
             y += INCREMENT;
@@ -367,4 +372,4 @@
             setTimeout(go, INTERVAL);
         }
     }, INTERVAL);
-})();
+}());
