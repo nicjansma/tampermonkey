@@ -26,8 +26,8 @@
 
         for (var i = 0; i < perfEntries.length; i++) {
             console.log("PaintTiming: ",
-                        perfEntries[i].name,
-                        perfEntries[i].startTime);
+                perfEntries[i].name,
+                perfEntries[i].startTime);
         }
     });
 

@@ -26,14 +26,14 @@
 
         for (var i = 0; i < perfEntries.length; i++) {
             console.log("LongTasks: ",
-                        perfEntries[i].name,
-                        perfEntries[i].duration,
-                        perfEntries[i].attribution.length,
-                        perfEntries[i].attribution.length > 0 ? perfEntries[i].attribution[0].containerType : null,
-                        perfEntries[i].attribution.length > 0 ? perfEntries[i].attribution[0].containerName : null,
-                        perfEntries[i].attribution.length > 0 ? perfEntries[i].attribution[0].containerSrc : null,
-                        perfEntries[i].attribution.length > 0 ? perfEntries[i].attribution[0].containerId : null,
-                        perfEntries[i]);
+                perfEntries[i].name,
+                perfEntries[i].duration,
+                perfEntries[i].attribution.length,
+                perfEntries[i].attribution.length > 0 ? perfEntries[i].attribution[0].containerType : null,
+                perfEntries[i].attribution.length > 0 ? perfEntries[i].attribution[0].containerName : null,
+                perfEntries[i].attribution.length > 0 ? perfEntries[i].attribution[0].containerSrc : null,
+                perfEntries[i].attribution.length > 0 ? perfEntries[i].attribution[0].containerId : null,
+                perfEntries[i]);
         }
     });
 
