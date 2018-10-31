@@ -5,8 +5,9 @@
 // @description  Scrolls back and forth on the page
 // @author       Nic Jansma (nic@nicj.net)
 // @grant        none
-// @match        *
+// @match        *://*/*
 // @run-at       document-start
+// @noframes
 // @downloadUrl  https://raw.githubusercontent.com/nicjansma/tampermonkey/master/scroll-back-and-forth.js
 // @updateUrl    https://raw.githubusercontent.com/nicjansma/tampermonkey/master/scroll-back-and-forth.meta.js
 // ==/UserScript==

@@ -5,8 +5,9 @@
 //               - can be useful for debugging if boomerang is loading slowly
 // @author       Nic Jansma (nic@nicj.net)
 // @grant        none
-// @match        *
+// @match        *://*/*
 // @run-at       document-start
+// @noframes
 // @downloadUrl  https://raw.githubusercontent.com/nicjansma/tampermonkey/master/mpulse-boomerang-sync.js
 // @updateUrl    https://raw.githubusercontent.com/nicjansma/tampermonkey/master/mpulse-boomerang-sync.meta.js
 // ==/UserScript==

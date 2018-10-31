@@ -5,8 +5,9 @@
 // @description  Disables Boomerang
 // @author       Nic Jansma (nic@nicj.net)
 // @grant        none
-// @match        *
+// @match        *://*/*
 // @run-at       document-start
+// @noframes
 // @downloadUrl  https://raw.githubusercontent.com/nicjansma/tampermonkey/master/boomr-disable.js
 // @updateUrl    https://raw.githubusercontent.com/nicjansma/tampermonkey/master/boomr-disable.meta.js
 // ==/UserScript==

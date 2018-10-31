@@ -5,8 +5,9 @@
 // @description  Measures interaction (click, scroll, keyboard) delays and logs associated long tasks
 // @author       Nic Jansma (nic@nicj.net)
 // @grant        none
-// @match        *
+// @match        *://*/*
 // @run-at       document-start
+// @noframes
 // @downloadUrl  https://raw.githubusercontent.com/nicjansma/tampermonkey/master/interaction-delay.js
 // @updateUrl    https://raw.githubusercontent.com/nicjansma/tampermonkey/master/interaction-delay.meta.js
 // ==/UserScript==
