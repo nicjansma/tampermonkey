@@ -107,7 +107,6 @@
     function isFrameAccessible(frame) {
         /* eslint-disable no-unused-vars */
         var dummy;
-        /* eslint-enable no-unused-vars */
 
         try {
             // Try to access location.href first to trigger any Cross-Origin
@@ -128,6 +127,7 @@
         }
 
         return false;
+        /* eslint-enable no-unused-vars */
     }
 
     window.checkTransferSize = function() {
