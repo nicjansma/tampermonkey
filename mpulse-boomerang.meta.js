@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         mPulse Boomerang
 // @namespace    http://nicj.net
-// @version      1.3
+// @version      1.4
 // @description  Injects mPulse's Boomerang onto a page
 // @author       Nic Jansma (nic@nicj.net)
 // @grant        none
