@@ -12,7 +12,7 @@
 // @updateUrl    https://raw.githubusercontent.com/nicjansma/tampermonkey/master/mpulse-boomerang.meta.js
 // ==/UserScript==
 
-/* eslint-disable camelcase, no-script-url, no-underscore-dangle, no-undef */
+/* eslint-disable camelcase, no-script-url, no-underscore-dangle, no-undef, no-inline-comments, max-len */
 (function() {
     "use strict";
 
@@ -140,8 +140,7 @@
         try {
             win = iframe.contentWindow;
             doc = win.document.open();
-        }
-        catch (e) {
+        } catch (e) {
             // document.domain has been changed and we're on an old version of IE, so we got an access denied.
             // Note: the only browsers that have this problem also do not have CSP support.
 
@@ -164,8 +163,7 @@
 
         if (win.addEventListener) {
             win.addEventListener("load", win._boomrl, false);
-        }
-        else if (win.attachEvent) {
+        } else if (win.attachEvent) {
             win.attachEvent("onload", win._boomrl);
         }
 
@@ -184,8 +182,8 @@
 
         // Set attributes to trigger a Preload
         link.href = window.BOOMR.url;
-        link.rel  = "preload";
-        link.as   = "script";
+        link.rel = "preload";
+        link.as = "script";
 
         // Add our script tag if successful, fallback to iframe if not
         link.addEventListener("load", promote);
@@ -205,8 +203,7 @@
 
         // Append our link tag
         parentNode.appendChild(link);
-    }
-    else {
+    } else {
         // No Preload support, use iframe loader
         iframeLoader(false);
     }
@@ -218,8 +215,7 @@
 
     if (window.addEventListener) {
         window.addEventListener("load", boomerangSaveLoadTime, false);
-    }
-    else if (window.attachEvent) {
+    } else if (window.attachEvent) {
         window.attachEvent("onload", boomerangSaveLoadTime);
     }
 }());
