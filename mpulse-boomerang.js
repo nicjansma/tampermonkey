@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         mPulse Boomerang
 // @namespace    http://nicj.net
-// @version      1.4
+// @version      1.5
 // @description  Injects mPulse's Boomerang onto a page
 // @author       Nic Jansma (nic@nicj.net)
 // @grant        none
@@ -96,7 +96,7 @@
             script.id = scriptId || "boomr-if-as";
             script.src = window.BOOMR.url;
 
-            BOOMR_lstart = new Date().getTime();
+            window.BOOMR_lstart = new Date().getTime();
 
             parent = parent || doc.body;
             parent.appendChild(script);
@@ -201,7 +201,7 @@
         }, LOADER_TIMEOUT);
 
         // Note the timestamp we started trying to Preload
-        BOOMR_lstart = new Date().getTime();
+        window.BOOMR_lstart = new Date().getTime();
 
         // Append our link tag
         parentNode.appendChild(link);
